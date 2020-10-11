@@ -103,19 +103,22 @@ main {
 .fullscreen {
   height: 100vh;
   background-color: #eee;
-  
+  width: 100%;
+  position: relative;
 }
 .fone_elements {
-  position: relative;
-  top: 75%;
+  position: absolute;
+  bottom: 5%;
   left: 7%;
 }
 .title {
   color: var(--l-title-color);
   cursor: default;
   font-family: 'Press Start 2P', cursive;
-  width: 775px;
+  /* width: 775px; */
   text-shadow: 3px 3px 10px black;
+  /* height: 10px; */
+  /* position: absolute; */
 }
 .white {
   color: white;
@@ -127,28 +130,14 @@ main {
   padding: 30px 0px;
   cursor: default;
 }
-.vk {
-  display: block;
-  position: absolute;
-  top: 78%;
-  right: 12%;
+.fone_links > a > img {
   height: 60px;
   cursor: pointer;
-  border-radius: 100%;
-  transition: all 0.2s ease 0s;
 }
 .vk:hover {
   top: 79%;
 }
 .yt {
-  display: block;
-  height: 60px;
-  position: absolute;
-  top: 78%;
-  right: 8%;
-  cursor: pointer;
-  border-radius: 100%;
-  transition: all 0.2s ease 0s;
 }
 .yt:hover {
   top: 79%;
@@ -412,7 +401,6 @@ footer {
   background-size: 10%;
   background-repeat: repeat;
   display: flex;
-  flex-direction: ;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -1089,4 +1077,11 @@ footer {
   .popup_close {
     display: none;
   }
+}
+
+
+.fone_links {
+    position: absolute;
+    bottom: 5%;
+    right: 7%;
 }
