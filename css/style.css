@@ -379,7 +379,7 @@ footer {
   font-size: 22px;
 }
 .card_fone {
-  background-image: url('../pngs/cobblestone.png');
+  background: #9c9c9c;
   margin-top: 85px;
   margin-bottom: auto;
   border-radius: 20px;
@@ -422,7 +422,9 @@ footer {
   justify-content: space-around;
   align-items: center;
   margin: 45% 10px 0px 10px;
-  
+  background: #919191;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px #c1c1c1, -1px -1px 10px #c1c1c1;
 }
 .user {
   display: flex;
@@ -451,15 +453,20 @@ footer {
   box-shadow: 4px 4px 15px #1d1d1d;
 }
 .menu_btn {
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  margin-right: 5px;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  margin-left: 10px;
   border-radius: 25%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 4px 4px 10px #1d1d1d, -4px -4px 10px #1d1d1d;
+}
+.menu_btn:hover {
+  transform: scale(1.04);
+  cursor: pointer;
 }
 
 @media (max-width: 1025px) {
