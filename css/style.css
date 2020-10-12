@@ -480,7 +480,6 @@ footer {
   position: relative;
 }
 .menu_btn:hover {
-  transform: ;
   cursor: pointer;
 }
 .menu_btn::before {
