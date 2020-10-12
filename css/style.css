@@ -298,6 +298,7 @@ footer {
 }
 .footer_text {
   font-size: 15px;
+  cursor: default;
 }
 
 .popup_fone {
@@ -379,16 +380,20 @@ footer {
   font-size: 22px;
 }
 .card_fone {
-  background: #9c9c9c;
+  background: url('../pngs/backgraund.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   margin-top: 85px;
   margin-bottom: auto;
   border-radius: 20px;
-  box-shadow: 5px 5px 15px #a7a6a6, -5px -5px 10px #797979;
+  box-shadow: 5px 5px 15px #a7a6a6, -5px -5px 15px #a7a6a6;
   border-width: 4px;
   border-style: solid;
-  border-color: #eee;
+  border-color: #c5c4c4;
   border-bottom: none;
   border-right: none;
+  border-top: solid #cecece;
   width: 60%;
   height: 250px;
 }
@@ -396,10 +401,7 @@ footer {
   border-radius: 20px;
   border-width: 4px;
   height: 100%;
-  backdrop-filter: opacity(0.75);
-  background-position: center;
-  background-size: 10%;
-  background-repeat: repeat;
+  backdrop-filter: opacity(0.6);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -422,9 +424,10 @@ footer {
   justify-content: space-around;
   align-items: center;
   margin: 45% 10px 0px 10px;
-  background: #919191;
+  background: #8f8f8fb7;
   border-radius: 20px;
-  box-shadow: 4px 4px 10px #c1c1c1, -1px -1px 10px #c1c1c1;
+  box-shadow: 4px 4px 15px #c1c1c1, -1px -1px 15px #c1c1c1;
+  padding: 0px 0px;
 }
 .user {
   display: flex;
@@ -445,6 +448,15 @@ footer {
   left: 0%;
   top: 20%;
 }
+.a_bank {
+  text-decoration: underline;
+  color: var(--l-text-color);
+  opacity: 0.8;
+}
+.a_bank:hover {
+  color: #fff;
+  opacity: 1;
+}
 .profile_icon {
   height: 30px;
   border-radius: 50%;
@@ -457,16 +469,40 @@ footer {
   height: 45px;
   margin-right: 10px;
   margin-left: 10px;
-  border-radius: 25%;
+  border-radius: 50%;
+  padding: 5px 5px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   text-shadow: 4px 4px 10px #1d1d1d, -4px -4px 10px #1d1d1d;
+  position: relative;
 }
 .menu_btn:hover {
-  transform: scale(1.04);
+  transform: ;
   cursor: pointer;
+}
+.menu_btn::before {
+  content: '';
+  position: absolute;
+  left: 5%;
+  bottom: 7%;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 2px;
+  width: 90%;
+  display: none;
+  transition: 0.2s;
+}
+.menu_btn:hover::before {
+  display: block;
+}
+
+.menu_btn_img {
+  height: 44px;
+  width: 44px;
+  display: block;
 }
 
 @media (max-width: 1025px) {
