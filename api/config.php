@@ -3,10 +3,10 @@
         "mysqli" => [
             // MYSQLI
             "host" => "127.0.0.1",
-            "port" => 3008,
+            "port" => 3306,
             "login" => "root",
-            "password" => "password",
-            "database" => "database"
+            "password" => "",
+            "database" => "general"
         ],
         "base" => [
             "authTable" => "authsis.db"
