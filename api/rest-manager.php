@@ -26,7 +26,7 @@
     header("Content-Type: application/json");
     header("Access-Control-Allow-Origin: ".$_modules[self]["name"]);
     if(!file_exists(stripslashes($method).".php")) {
-        api(false, 1, self, ["debug.method"=>stripslashes($method)]);
+        api(false, 1, self, ["debug_method"=>stripslashes($method)]);
     }
     $levelOffset = 3;
     $levels = array_slice($levels, $levelOffset);
@@ -46,7 +46,7 @@
     require stripslashes($method).".php";
     function api(bool $state = false, int $code = 0, string $method = "Undefined", array $data = []){
         global $_modules;
-        $data = array_merge($data, ["debug.timestamp"=>time()]);
+        $data = array_merge($data, ["debug_timestamp"=>time()]);
         $des = $_modules[$method][$state?"successes":"errors"][$code];
         $description = $des!==""?$des:$_modules[$method][$state?"successes":"errors"][0];
         echo json_encode(array_merge(["state"=>$state,"code"=>$code,"description"=>$description,"module"=>$method], $data));
